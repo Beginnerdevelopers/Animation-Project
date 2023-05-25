@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: blue;
+        color: white;
+        padding: 10px 35px;
+        border: none;
+        position: relative;
+        font-size: 20px;
+      }
+      button::before {
+        content: "";
+        position: absolute;
+
+        height: 10px;
+        width: 10px;
+        top: -9%;
+        left: -2%;
+        border-top: 2px solid yellow;
+        border-left: 2px solid yellow;
+      }
+      button::after {
+        content: "";
+        position: absolute;
+
+        height: 10px;
+        width: 10px;
+        bottom: -9%;
+        right: -2%;
+        border-bottom: 2px solid yellow;
+        border-right: 2px solid yellow;
+      }
+      button:hover::after,
+      button:hover::before {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Hover Me</button>
+  </body>
+</html>
